@@ -653,6 +653,7 @@ examples:
   Arrays: "Arrays"
   Control: "Control"
   Image: "Image"
+  Image_Processing: "Image Processing"
   Color: "Color"
   Math: "Math"
   Simulate: "Simulate"

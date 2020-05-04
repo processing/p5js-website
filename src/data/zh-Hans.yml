@@ -653,6 +653,7 @@ examples:
   Arrays: "数组"
   Control: "控制"
   Image: "图像"
+  Image_Processing: "图像处理"
   Color: "颜色"
   Math: "数学"
   Simulate: "模拟"

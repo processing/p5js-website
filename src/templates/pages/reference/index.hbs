@@ -54,6 +54,10 @@ slug: reference/
       }
     });
 
+    function removePlaceholder() {
+      $('#search input').attr('placeholder', '');
+    }
+
     function updateLanguage() {
       if (translations) {
         // reference title
@@ -62,6 +66,10 @@ slug: reference/
         $('#reference-tagline').html(translations['reference-tagline']);
         // reference tagline
         $('#search input').attr('placeholder', translations['reference-search']);
+        $('#search input').on('focus', removePlaceholder);
+        $('#search input').focusout(function () {
+          $('#search input').attr('placeholder', translations['reference-search']);
+        })
         $('#search input').attr('title', translations['reference-search']);
         // reference menu
         $('#reference-menu-home').html(translations['reference-menu-home']);

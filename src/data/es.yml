@@ -654,6 +654,7 @@ examples:
   Arrays: "Arreglos"
   Control: "Control"
   Image: "Imagen"
+  Image_Processing: "Procesamiento de imagen"
   Color: "Color"
   Math: "Matemática"
   Simulate: "Simulación"

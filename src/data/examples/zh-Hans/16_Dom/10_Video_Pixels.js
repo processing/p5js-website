@@ -1,15 +1,16 @@
 /*
- * @name Video Pixels
+ * @name 视频像素
  * @frame 320,240
- * @description Load a video, manipulate its pixels and draw to canvas.
- * To run this example locally, you will need a running 
- * <a href="https://github.com/processing/p5.js/wiki/Local-server">local server</a>.
+ * @description <p>加载一个视频，操纵其像素并绘制到画布上。
+ * <p><em><span class="small"> 要在本地运行此范例，你需要至少一个视频文件和
+ * <a href="http://p5js.org/reference/#/libraries/p5.dom"> p5.dom 库，</a>
+ * 并运行在<a href="https://github.com/processing/p5.js/wiki/Local-server">本地伺服器</a>上。</span></em></p>
  */
 let fingers;
 
 function setup() {
   createCanvas(320, 240);
-  // specify multiple formats for different browsers
+  // 标明不同浏览器的多种格式
   fingers = createVideo(['assets/fingers.mov', 'assets/fingers.webm']);
   fingers.loop();
   fingers.hide();

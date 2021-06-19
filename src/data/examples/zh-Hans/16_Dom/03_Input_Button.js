@@ -1,11 +1,14 @@
 /*
- * @name Input and Button
- * @description Input text and click the button to see it affect the the canvas.
+ * @name 输入框和按钮
+ * @description 你需要在该范例中包含
+ * <a href="http://p5js.org/reference/#/libraries/p5.dom"> p5.dom 库</a>
+ * 才能在你自己的项目中使用。<br><br>
+ * 输入文本并点击按钮查看它对画布的影响。
  */
 let input, button, greeting;
 
 function setup() {
-  // create canvas
+  // 创建画布
   createCanvas(710, 400);
 
   input = createInput();

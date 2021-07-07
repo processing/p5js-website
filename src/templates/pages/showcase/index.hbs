@@ -4,7 +4,10 @@ slug: showcase/
 ---
 
 <div id="showcase-page">
-
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   {{> sidebar}}
 
   <main  id="content" class="column-span">
@@ -23,7 +26,7 @@ slug: showcase/
       <h2 class="featuring">{{#i18n "showcase-featuring"}}{{/i18n}}</h2>
 
       <div class="left-column">
-        <div>
+        <div data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
         <h3 class="title"><a href="./featuring/roni-cantor.html">{{#i18n "project-roni"}}{{/i18n}}</a></h3>
           <p class="credit">{{#i18n "credit-roni"}}{{/i18n}}</p>
           <a href="./featuring/roni-cantor.html" class="no-arrow-link">
@@ -36,7 +39,7 @@ slug: showcase/
           </ul>
         </div>
 
-        <div>
+        <div data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
         <h3 class="title"><a href="./featuring/daein-chung.html">{{#i18n "project-daein"}}{{/i18n}}</a></h3>
           <p class="credit">{{#i18n "credit-daein"}}{{/i18n}}</p>
           <a href="./featuring/daein-chung.html" class="no-arrow-link">
@@ -52,7 +55,7 @@ slug: showcase/
           </ul>
         </div>
 
-        <div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
         <h3 class="title"><a href="./featuring/casey-louise.html">{{#i18n "project-casey-louise"}}{{/i18n}}</a></h3>
           <p class="credit">{{#i18n "credit-casey-louise"}}{{/i18n}}</p>
           <a href="./featuring/casey-louise.html" class="no-arrow-link">
@@ -66,7 +69,7 @@ slug: showcase/
       </div>
 
       <div class="right-column">
-        <div>
+        <div data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
         <h3 class="title"><a href="./featuring/phuong-ngo.html">{{#i18n "project-phuong"}}{{/i18n}}</a></h3>
           <p class="credit">{{#i18n "credit-phuong"}}{{/i18n}}</p>
           <a href="./featuring/phuong-ngo.html" class="no-arrow-link">
@@ -80,7 +83,7 @@ slug: showcase/
           </ul>
         </div>
 
-        <div>
+        <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
           <h3 class="title"><a href="./featuring/qianqian-ye.html">{{#i18n "project-qianqian"}}{{/i18n}}</a></h3>
           <p class="credit">{{#i18n "credit-qianqian"}}{{/i18n}}</p>
           <a href="./featuring/qianqian-ye.html" class="no-arrow-link">
@@ -92,7 +95,7 @@ slug: showcase/
           </ul>
         </div>
 
-        <div>
+        <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
         <h3 class="title"><a href="./featuring/moon-xin.html">{{#i18n "project-moon-xin"}}{{/i18n}}</a></h3>
           <p class="credit">{{#i18n "credit-moon-xin"}}{{/i18n}}</p>
           <a href="./featuring/moon-xin.html" class="no-arrow-link">

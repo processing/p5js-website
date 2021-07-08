@@ -14,7 +14,7 @@
 
  function setup() {
   // 셰이더를 작동하기 위해 WEBGL 모드가 필요합니다.
-   createCanvas(710, 400, WEBGL);
+   createCanvas(400, 400, WEBGL);
    noStroke();
  }
 

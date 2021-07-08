@@ -9,7 +9,6 @@ precision mediump float;
 // these are known as preprocessor directive
 // essentially we are just declaring some variables that wont change
 // you can think of them just like const variables
-
 #define PI 3.14159265359
 #define TWO_PI 6.28318530718
 
@@ -18,6 +17,10 @@ uniform vec2 resolution;
 uniform float time;
 uniform float mouse;
 
+// this is the same variable we declared in the vertex shader
+// we need to declare it here too!
+varying vec2 vTexCoord;
+
 // this is a function that turns an rgb value that goes from 0 - 255 into 0.0 - 1.0
 vec3 rgb(float r, float g, float b){
     return vec3(r / 255.0, g / 255.0, b / 255.0);
@@ -25,7 +28,7 @@ vec3 rgb(float r, float g, float b){
 
 vec4 poly(float x, float y, float size, float sides, float rotation, vec3 col){
     // get our coordinates
-    vec2 coord = gl_FragCoord.xy;
+    vec2 coord = vTexCoord;
 
     // move the coordinates to where we want to draw the shape
     vec2 pos = vec2(x,y) - coord;
@@ -45,7 +48,7 @@ vec4 poly(float x, float y, float size, float sides, float rotation, vec3 col){
 
     // restrict our shape to black and white and set it's size
     // we use the smoothstep function to get a nice soft edge
-    d = 1.0 - smoothstep(size*0.5, size*0.5+1.0, d);
+    d = 1.0 - smoothstep(size*0.5, size*0.5+0.002, d);
 
     // return the color with the shape as the alpha channel
     return vec4(col, d);
@@ -54,8 +57,8 @@ vec4 poly(float x, float y, float size, float sides, float rotation, vec3 col){
 
 void main() {
 
-    vec2 center = resolution * 1.0; // draw the shape at the center of the screen
-    float size = resolution.y * 0.5; // make the shape a quarter of the screen height
+    vec2 center = vec2(0.5); // draw the shape at the center of the screen
+    float size = 0.25; // make the shape a quarter of the screen height
     float sides = mod(floor(mouse), 7.0) + 3.0; // slowly increase the sides, when it reaches 10 sides, go back down to 3
     float rotation = time; // rotation is in radians, but for time it doesnt really matter
 

@@ -14,7 +14,7 @@
 
  function setup() {
    // shaders require WEBGL mode to work
-   createCanvas(710, 400, WEBGL);
+   createCanvas(400, 400, WEBGL);
    noStroke();
  }
 

@@ -35,6 +35,7 @@ Examples help demonstrate different programming concepts and functionality of th
    /*
     * @name Your Example Name Here (This shows up on the examples page as well.)
     * @frame 710,400 (optional)
+    * @arialabel If there is a frame, add more context to its relation to the description and code for users interacting with your example with a screen reader. 
     * @description Write a description of your example here. This gets displayed
     * on the page underneath your example. You can use <br><br> to add a line
     * break. Please limit lines to 80 columns (total characters) long.

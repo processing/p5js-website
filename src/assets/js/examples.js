@@ -68,7 +68,7 @@ var examples = {
       // render?
       var norender = data.indexOf('@norender') !== -1;
 
-      // parse and set name and description
+      // parse and set name, aria label, and description
       var metaReg = new RegExp('\\* ', 'g');
       var spaceReg = new RegExp(' ', 'g');
 
@@ -76,6 +76,11 @@ var examples = {
       var endName = data.indexOf("\n", startName);
 
       var name = startName !== 5 ? data.substring(startName, endName) : '';
+
+      var startAriaLabel = data.indexOf("@arialabel")+11;
+      var endAriaLabel = data.indexOf("\n", startAriaLabel);
+
+      var ariaLabel = startAriaLabel !== 10 ? data.substring(startAriaLabel, endAriaLabel) : '';
 
       var startDesc = data.indexOf("@description")+13;
       var endDesc = data.indexOf("*/", startDesc);
@@ -85,6 +90,7 @@ var examples = {
 
       $('#example-name').html(name);
       $('#example-desc').html(desc);
+      $('#exampleFrame').attr("aria-label", ariaLabel);
 
       // strip description and set code
       var ind = data.indexOf('*/');
